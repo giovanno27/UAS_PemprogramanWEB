@@ -1,0 +1,100 @@
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet" />
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      font-family: "Tilt Neon", sans-serif;
+    }
+
+    h1 {
+      /* background-color: #000; */
+      padding: .5rem;
+      color: #000;
+    }
+
+    a {
+      display: block;
+      padding: .5rem 0 .5rem 2rem;
+      text-decoration: none;
+      color: #000;
+    }
+
+    a:hover {
+      background-color: #000;
+      color: #FFF;
+    }
+
+    .dialog {
+  display: none; /* Sembunyikan dialog box secara default */
+  position: fixed; /* Posisikan dialog box secara fixed */
+  z-index: 1; /* Tempatkan dialog box di atas elemen lain */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Tambahkan scrollbar jika konten melebihi ukuran dialog box */
+  background-color: rgba(0, 0, 0, 0.4); /* Background semi-transparan */
+}
+
+.dialog-content {
+  background-color: #fff;
+  margin: 15% auto; /* Posisikan konten di tengah secara horizontal */
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%; /* Atur lebar konten */
+}
+
+#close-dialog {
+  background-color: #f44336; /* Warna merah untuk tombol tutup */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+  </style>
+</head>
+<body>
+  <h1>Menu</h1>
+  <hr>
+      <a href="home.html" target="kanan">Home</a>
+      <hr>
+      <a href="profil.html" target="kanan">Profil</a>
+      <hr>
+      <a href="galery.html" target="kanan">Gallery</a>
+      <hr>
+      <a href="kontak.html" target="kanan">Kontak</a>
+      <hr>
+      <button id="open-dialog">Buka Dialog</button>
+
+      <div id="dialog" class="dialog">
+        <div class="dialog-content">
+          <h2>Ini adalah dialog box</h2>
+          <p>Konten dialog box dapat diletakkan di sini.</p>
+          <button id="close-dialog">Tutup</button>
+        </div>
+      </div>
+<script>
+  const dialog = document.getElementById('dialog');
+const openButton = document.getElementById('open-dialog');
+const closeButton = document.getElementById('close-dialog');
+
+openButton.addEventListener('click', () => {
+  dialog.style.display = 'block'; /* Tampilkan dialog box */
+});
+
+closeButton.addEventListener('click', () => {
+  dialog.style.display = 'none'; /* Sembunyikan dialog box */
+});
+</script>
+</body>
+</html>
